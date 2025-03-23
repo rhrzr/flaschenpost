@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlaschenpostToDo.Presentation.View.DetailsPage"
+             xmlns:viewModel="clr-namespace:FlaschenpostToDo.Presentation.ViewModel"
+             x:DataType="{x:Type viewModel:DetailsViewModel}">
+
+    <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto"
+          ColumnDefinitions="Auto, *"
+          RowSpacing="10"
+          ColumnSpacing="10"
+          Margin="20">
+        <Label Grid.Row="0"
+               Grid.ColumnSpan="2"
+               Text="{Binding TodoItem.Title}"
+               FontSize="24"
+               HorizontalTextAlignment="Center" />
+        <BoxView
+            Grid.Row="1"
+            Grid.ColumnSpan="2"
+            HeightRequest="1" />
+        <Label Grid.Row="2"
+               Text="Id"
+               FontAttributes="Bold" />
+        <Label Grid.Row="2"
+               Grid.Column="1"
+               Text="{Binding TodoItem.Id}" />
+        <Label Grid.Row="3"
+               Text="Issued"
+               FontAttributes="Bold" />
+        <Label Grid.Row="3"
+               Grid.Column="1"
+               Text="{Binding TodoItem.IssuedDateTime}" />
+        <Label Grid.Row="4"
+               Text="Due"
+               FontAttributes="Bold" />
+        <Label Grid.Row="4"
+               Grid.Column="1"
+               Text="{Binding TodoItem.DueDateTime}" />
+        <Label Grid.Row="5"
+               Text="Last Update"
+               FontAttributes="Bold" />
+        <Label Grid.Row="5"
+               Grid.Column="1"
+               Text="{Binding TodoItem.LastUpdatedDateTime}" />
+        <Label Grid.Row="6"
+               Text="Completed"
+               FontAttributes="Bold" />
+        <Label Grid.Row="6"
+               Grid.Column="1"
+               Text="{Binding TodoItem.CompletedDateTime}" />
+        <Label Grid.Row="7"
+               Text="Description"
+               FontAttributes="Bold" />
+        <Label Grid.Row="7"
+               Grid.Column="1"
+               Text="{Binding TodoItem.Description}" />
+    </Grid>
+
+</ContentPage>

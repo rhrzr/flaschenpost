@@ -1,0 +1,61 @@
+@FlaschenpostApi_HostAddress = http://localhost:5274
+
+### GET item with id
+# @no-log
+GET {{FlaschenpostApi_HostAddress}}/todoitems/1
+
+### GET all items
+# @no-log
+GET {{FlaschenpostApi_HostAddress}}/todoitems
+Accept: application/json
+
+### POST data
+# post-request with demo data
+# @no-log
+POST {{FlaschenpostApi_HostAddress}}/todoitems
+Content-Type: application/json
+
+[
+  {
+    "title": "Honey",
+    "issuedDateTime": "2025-03-20T11:31:50.416Z",
+    "dueDateTime": "2025-03-20T11:31:50.416Z",
+    "description": "You should eat more Honey"
+  },
+  {
+    "title": "Mustard",
+    "issuedDateTime": "2025-03-20T11:31:50.416Z",
+    "dueDateTime": "2025-03-20T11:31:50.416Z",
+    "description": "You should eat more Mustard"
+  },
+  {
+    "title": "Ketchup",
+    "issuedDateTime": "2025-03-20T11:31:50.416Z",
+    "dueDateTime": "2025-03-20T11:31:50.416Z",
+    "description": "You should eat more Ketchup"
+  },
+  {
+    "title": "Chips",
+    "issuedDateTime": "2025-03-20T11:31:50.416Z",
+    "dueDateTime": "2025-03-20T11:31:50.416Z",
+    "description": "You should eat more Chips"
+  },
+  {
+    "title": "Hamburgers",
+    "issuedDateTime": "2025-03-20T11:31:50.416Z",
+    "dueDateTime": "2025-03-20T11:31:50.416Z",
+    "description": "You should eat more Hamburgers"
+  },
+  {
+    "title": "Cakes",
+    "issuedDateTime": "2025-03-20T11:31:50.416Z",
+    "dueDateTime": "2025-03-20T11:31:50.416Z",
+    "description": "You should eat more Cakes"
+  },
+  {
+    "title": "Ice Cream",
+    "issuedDateTime": "2025-03-20T11:31:50.416Z",
+    "dueDateTime": "2025-03-20T11:31:50.416Z",
+    "description": "You should eat more Ice Cream"
+  }
+]

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlaschenpostToDo.Presentation.Templates.TaskCard"
+             xmlns:network="clr-namespace:FlaschenpostToDo.Network"
+             x:DataType="{x:Type network:TodoItem}">
+
+    <Grid RowDefinitions="Auto, Auto, Auto"
+          ColumnDefinitions="Auto, *"
+          ColumnSpacing="10">
+        <Label Grid.Row="0"
+               Text="Id"
+               FontAttributes="Bold" />
+        <Label Grid.Row="0"
+               Grid.Column="1"
+               Text="{Binding Id}" />
+        <Label Grid.Row="1"
+               Text="Due"
+               FontAttributes="Bold" />
+        <Label Grid.Row="1"
+               Grid.Column="1"
+               Text="{Binding DueDateTime}" />
+        <Label Grid.Row="2"
+               Grid.ColumnSpan="2"
+               Text="{Binding Title}"
+               FontSize="24"
+               HorizontalTextAlignment="Center" />
+    </Grid>
+
+</ContentView>
