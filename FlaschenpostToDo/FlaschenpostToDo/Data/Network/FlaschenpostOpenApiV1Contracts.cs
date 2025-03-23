@@ -36,14 +36,14 @@ namespace FlaschenpostToDo.Network
         /// <exception cref="ApiException">A server side error occurred.</exception>
         System.Threading.Tasks.Task<System.Collections.Generic.ICollection<TodoItem>> TodoItemsAllAsync(System.Threading.CancellationToken cancellationToken);
 
-        /// <returns>OK</returns>
+        /// <returns>No Content</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<TodoItem> TodoItemsPOSTAsync(TodoItem body);
+        System.Threading.Tasks.Task TodoItemsPOSTAsync(System.Collections.Generic.IEnumerable<TodoItem> body);
 
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <returns>OK</returns>
+        /// <returns>No Content</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<TodoItem> TodoItemsPOSTAsync(TodoItem body, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task TodoItemsPOSTAsync(System.Collections.Generic.IEnumerable<TodoItem> body, System.Threading.CancellationToken cancellationToken);
 
         /// <returns>OK</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>

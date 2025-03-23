@@ -34,22 +34,18 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/TodoItem"
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/TodoItem"
+                }
               }
             }
           },
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TodoItem"
-                }
-              }
-            }
+          "204": {
+            "description": "No Content"
           },
           "400": {
             "description": "Bad Request"
